@@ -1,17 +1,19 @@
 library(shiny)
 
-# Define UI for miles per gallon application
+# Define shiny UI
 shinyUI(pageWithSidebar(
   
-  # Application title
+  # Application title: none
   headerPanel(""),
-    
+  
+  #Place reactive plots
   mainPanel(
   plotOutput("demoplot"),plotOutput("demoplot2")
                #div(class="span5",plotOutput("hist")),div(class="span5",plotOutput("histdbh"))),
       #tabPanel("Code",verbatimTextOutput("code"))
     ),
   
+  #Sidebar panel info (placed after graphs for better fit on narrow pages)
   sidebarPanel(
     helpText("Takes a player's per-game points above the league average, 
              multiplies it by the value below, and adds to the player's score."),
